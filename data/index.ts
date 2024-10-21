@@ -10,7 +10,7 @@ export const navItems = [
       id: 1,
       title: "I prioritize client collaboration, fostering open communication ",
       description: "",
-      className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
       img: "/b1.svg",
@@ -20,7 +20,7 @@ export const navItems = [
       id: 2,
       title: "I'm very flexible with time zone communications",
       description: "",
-      className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+      className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "",
       titleClassName: "justify-start",
       img: "",
@@ -28,13 +28,13 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "My tech stack",
-      description: "I constantly try to improve",
+      title: "Currently building a JS Animation library",
+      description: "The Inside Scoop",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-      imgClassName: "",
-      titleClassName: "justify-center",
-      img: "",
-      spareImg: "",
+      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+      titleClassName: "justify-center md:justify-start lg:justify-center",
+      img: "/b5.svg",
+      spareImg: "/grid.svg",
     },
     {
       id: 4,
@@ -46,16 +46,15 @@ export const navItems = [
       img: "/grid.svg",
       spareImg: "/b4.svg",
     },
-  
     {
       id: 5,
-      title: "Currently building a JS Animation library",
-      description: "The Inside Scoop",
-      className: "md:col-span-3 md:row-span-2",
-      imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
+      title: "My tech stack",
+      description: "I constantly try to improve",
+      className: "lg:col-span-3 md:col-span-3 md:row-span-2",
+      imgClassName: "",
       titleClassName: "justify-center md:justify-start lg:justify-center",
-      img: "/b5.svg",
-      spareImg: "/grid.svg",
+      img: "",
+      spareImg: "",
     },
     {
       id: 6,
@@ -69,7 +68,7 @@ export const navItems = [
     },
   ];
   
-  export const projects = [
+  export const projects = [ 
     {
       id: 1,
       title: "3D Solar System Planets to Explore",
