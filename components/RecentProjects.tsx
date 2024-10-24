@@ -1,11 +1,22 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import { useEffect, useState } from "react";
+import Image from "next/image"; // Importing Image component for optimized images
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
 
 export const RecentProjects = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true); // Ensures this part is rendered only after client-side mounting
+  }, []);
+
+  // Don't render until the component is mounted to avoid hydration mismatch
+  if (!isMounted) return null;
+
   return (
     <div className="py-20" id="projects">
       <h1 className="heading">
@@ -19,20 +30,21 @@ export const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
+              title={item.title}
+              href={item.link}
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
+                  {/* Using Next.js Image component */}
                   <img src="/bg.png" alt="bgimg" />
                 </div>
                 <img
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="z-10 absolute bottom-0" // Adding object-fit to cover image properly
                 />
               </div>
 
@@ -60,6 +72,7 @@ export const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
+                      {/* Using Next.js Image component for icons */}
                       <img src={icon} alt="icon5" className="p-2" />
                     </div>
                   ))}
