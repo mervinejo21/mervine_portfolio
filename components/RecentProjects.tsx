@@ -2,7 +2,6 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 import { useEffect, useState } from "react";
-import Image from "next/image"; // Importing Image component for optimized images
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/3d-pin";
