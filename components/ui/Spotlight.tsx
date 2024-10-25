@@ -8,7 +8,7 @@ type SpotlightProps = {
   opacity?: number;  // Customizable opacity
 };
 
-export const Spotlight = ({ className, fill = "white", blur = 151, opacity = 0.21 }: SpotlightProps) => {
+export const Spotlight = ({ className, fill = "white", blur = 151, opacity = 0.15 }: SpotlightProps) => {
   return (
     <svg
       className={cn(
