@@ -54,27 +54,26 @@ const content = [
     ),
   },
   {
-    title: "Bachelor's Degree",
-    description:
-      "Completed my Bachelor's degree in Computer Science and Engineering at the University of Kerala, where I gained a solid foundation in computer science, algorithms, data structures, and software development.",
+    title: "Performer Of The Quarter",
+    description: "Awarded for outstanding performance and dedication to work during the quarter.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-         <Image
-          src="/degree.png"
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--purple-500),var(--pink-500))] flex items-center justify-center text-white">
+        <Image
+          src="/award.png"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="degree certificate"
+          alt="award certificate"
         />
       </div>
     ),
-  },
+  },  
 ];
 export function Certifications() {
   return (
     <div className="py-20" id="certifications">
         <h1 className="heading pb-20">
-        My <span className="text-purple">Certifications</span>
+        <span className="text-purple">Certifications & Awards </span>
       </h1>
       <StickyScroll content={content} />
     </div>
