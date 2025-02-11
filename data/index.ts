@@ -68,9 +68,17 @@ export const navItems = [
     },
   ];
   
-  export const projects = [ 
+  export const projects = [
     {
       id: 1,
+      title: "StudintIO",
+      des: "AI-Enhanced Platform for Student & Expat",
+      img: "/studintio.png",
+      iconLists: ["/next.svg", "/typeScript.png", "/tailwindcss.png"],
+      link: "https://studintiov1.vercel.app/",
+    },
+    {
+      id: 2,
       title: "QR Code Generator",
       des: "Generate QR codes for your links and texts.",
       img: "/qr-generator.png",
@@ -78,7 +86,7 @@ export const navItems = [
       link: "https://mervinejo21.github.io/QR-Generator/",
     },
     {
-      id: 2,
+      id: 3,
       title: "Vending Machine API Integration",
       des: "Ingrated various vending machine APIs to the GoKhana application.",
       img: "/p2.png",
