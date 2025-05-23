@@ -56,22 +56,26 @@ export const BackgroundGradientAnimation = ({
     document.body.style.setProperty("--pointer-color", pointerColor);
     document.body.style.setProperty("--size", size);
     document.body.style.setProperty("--blending-value", blendingValue);
-  }, []);
+  }, [gradientBackgroundStart, gradientBackgroundEnd, firstColor, secondColor,
+    thirdColor, fourthColor, fifthColor, pointerColor, size, blendingValue]);
 
   useEffect(() => {
-    function move() {
+    const moveAnimation = () => {
       if (!interactiveRef.current) {
         return;
       }
-      setCurX(curX + (tgX - curX) / 20);
-      setCurY(curY + (tgY - curY) / 20);
+      const newCurX = curX + (tgX - curX) / 20;
+      const newCurY = curY + (tgY - curY) / 20;
+      setCurX(newCurX);
+      setCurY(newCurY);
       interactiveRef.current.style.transform = `translate(${Math.round(
-        curX
-      )}px, ${Math.round(curY)}px)`;
-    }
+        newCurX
+      )}px, ${Math.round(newCurY)}px)`;
+    };
 
-    move();
-  }, [tgX, tgY]);
+    const animationFrame = requestAnimationFrame(moveAnimation);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [curX, curY, tgX, tgY]);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     if (interactiveRef.current) {

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
@@ -29,10 +30,12 @@ const Experience = () => {
             // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex flex-row items-center p-3 py-4 sm:p-5 lg:p-6 gap-2">
-              <img
+            <div className="flex flex-row items-center p-3 py-4 sm:p-5 md:py-12 lg:py-14 lg:p-6 gap-2">
+              <Image
                 src={card.thumbnail}
                 alt={card.thumbnail}
+                width={96}
+                height={96}
                 className="w-12 sm:w-16 md:w-20 lg:w-24"
               />
               <div className="ms-3 sm:ms-4 lg:ms-5">
