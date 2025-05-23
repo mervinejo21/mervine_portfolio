@@ -1,5 +1,5 @@
 export const navItems = [
-    { name: "About", link: "#about" },
+    { name: "About", link: "about" },
     { name: "Experience", link: "#experience" },
     { name: "Projects", link: "#projects" },
     { name: "Contact", link: "#contact" },
@@ -69,6 +69,14 @@ export const navItems = [
   ];
   
   export const projects = [
+    {
+      id: 0,
+      title: "Kayan",
+      des: "Just a simple freelance website for a friend.",
+      img: "/logo.png",
+      iconLists: ["/next.svg", "/typeScript.png", "/tailwindcss.png"],
+      link: "https://kayan-eosin.vercel.app/",
+    },
     {
       id: 1,
       title: "StudintIO",

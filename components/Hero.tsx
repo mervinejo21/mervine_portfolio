@@ -40,17 +40,17 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+      <div className="flex justify-center relative my-10 sm:my-20 z-10">
+        <div className="max-w-[95vw] sm:max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
+          <p className="uppercase tracking-widest text-[10px] sm:text-xs text-center text-blue-100 max-w-60 sm:max-w-80">
             Dynamic Web Magic with Next.js
           </p>
 
           <TextGenerateEffect
             words="Hi! I'm Mervine Joshy, FullStack Developer based in Paris."
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[28px] sm:text-[40px] md:text-5xl lg:text-6xl"
           />
-          <a href="#projects">
+          <a href="#projects" className="mt-6 sm:mt-8">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}

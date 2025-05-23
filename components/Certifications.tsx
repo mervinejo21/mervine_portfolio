@@ -10,12 +10,12 @@ const content = [
     description:
       "This certificate recognizes the successful completion of a full-stack web development course, covering React, Redux, Express, and MongoDB. The recipient has demonstrated skills in building web applications, handling authentication, processing payments, and managing deployment, with practical experience in backend email integration.",
     content: (
-      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white p-4">
         <Image
           src="/udemy.png"
           width={300}
           height={300}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-contain"
           alt="udemy certificate"
         />
       </div>
@@ -67,15 +67,17 @@ const content = [
         />
       </div>
     ),
-  },  
+  },
 ];
 export function Certifications() {
   return (
-    <div className="py-20" id="certifications">
-        <h1 className="heading pb-20">
+    <div className="py-10 sm:py-20" id="certifications">
+      <h1 className="heading pb-10 sm:pb-20">
         <span className="text-purple">Certifications & Awards </span>
       </h1>
-      <StickyScroll content={content} />
+      <div className="max-w-[95vw] sm:max-w-full mx-auto">
+        <StickyScroll content={content} />
+      </div>
     </div>
   );
 }
